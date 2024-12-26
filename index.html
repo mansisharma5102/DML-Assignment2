@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form">
+            <div class="step" id="step1">Step 1</div>
+            <div class="step" id="step2">Step 2</div>
+            <div class="step" id="step3">Step 3</div>
+        </div>
+        <form id="multiStepForm">
+            <div class="form-step">
+                <h2 style="text-align: center;">Personal Details</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                <small class="error-message"></small>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <small class="error-message"></small>
+
+                <label for="phone">Phone:</label>
+                <input type="number" id="phone" name="phone" placeholder="10-digit phone number" required>
+                <small class="error-message"></small>
+
+                <label>Gender:</label>
+                <div class="genders">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="Other" required>
+                    <label for="other">Other</label>
+                </div>
+                <small class="error-message"></small>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+                <small class="error-message"></small>
+
+                <button type="button" class="btn-next">Next</button>
+            </div>
+
+            <div class="form-step">
+                <h2 style="text-align: center;">Professional Details</h2>
+                <label for="education">Education:</label>
+                <select id="education" name="education" required>
+                    <option value="">Select your education</option>
+                    <option value="High School">High School</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                </select>
+                <small class="error-message"></small>
+                <!-- label -->
+                <label for="skills">Choose your skills:</label>
+                <div id="skills">
+                    <input type="checkbox" id="html" name="skills" value="html">
+                    <label for="html">HTML</label>
+      
+                    <input type="checkbox" id="css" name="skills" value="css">
+                    <label for="css">CSS</label>
+                 
+                 
+                    <input type="checkbox" id="javascript" name="skills" value="javascript">
+                    <label for="javascript">JavaScript</label>
+            
+               
+                    <input type="checkbox" id="python" name="skills" value="python">
+                    <label for="python">Python</label>
+                  
+                 
+                    <input type="checkbox" id="java" name="skills" value="java">
+                    <label for="java">Java</label>
+                </div>
+                <label for="experience">Experience:</label>
+                <input type="number" id="experience" name="experience" min="0" max="50" required>
+                <small class="error-message"></small>
+
+                <label for="currentRole">Current Role:</label>
+                <input type="text" id="currentRole" name="currentRole" placeholder="Enter your current role" required>
+                <small class="error-message"></small>
+
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-next">Next</button>
+            </div>
+
+     
+            <div class="form-step" >
+                <h2>Review & Submit</h2>
+                <div id="reviewData"></div>
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
